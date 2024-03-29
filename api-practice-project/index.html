@@ -74,7 +74,7 @@ async function fetchData() {
         const lon = document.getElementById("lon").value;
         const time =  document.getElementById("time").value;
        //This is using the single time call of historical data
- const apiUrl = `https://api.openweathermap.org/data/3.0/onecall/timemachine?lat=${lat}&lon=${lon}&dt=${time}&appid=${apiKey}`
+ const apiUrl = 'https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lon + '&appid=' + apiKey;
 console.log(apiUrl)
 
         const response = await fetch(apiUrl);
